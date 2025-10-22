@@ -74,16 +74,30 @@ const Navbar = () => {
             </div>
             <div className="relative bg-white py-20">
                 {/* Các thẻ card */}
-                <div className="flex flex-col lg:flex-row justify-center gap-6 absolute -top-24 left-1/2 -translate-x-1/2 w-full max-w-6xl z-20">
+                <div
+                    className="
+                                flex flex-wrap justify-center gap-4
+                                lg:flex-nowrap lg:absolute lg:-top-24 lg:left-1/2 lg:-translate-x-1/2
+                                w-full max-w-6xl z-20
+                                px-4
+                                "
+                >
                     {cards.map((card, index) => (
                         <a
                             key={index}
                             href={card.link}
-                            className="group bg-[#F37021] text-white w-[260px] text-center px-5 py-6 rounded-lg transition-transform transform hover:-translate-y-2 hover:shadow-lg no-underline"
+                            className="
+                                    group bg-[#F37021] text-white
+                                    flex-1 min-w-[100px] max-w-[200px]
+                                    text-center px-3 py-5
+                                    rounded-lg transition-transform transform
+                                    hover:-translate-y-2 hover:shadow-lg
+                                    no-underline
+                                    "
                         >
-                            <div className="flex flex-col items-center gap-4">
+                            <div className="flex flex-col items-center gap-3">
                                 {/* Icon */}
-                                <div className="relative w-14 h-14">
+                                <div className="relative w-10 h-10 sm:w-12 sm:h-12">
                                     <img
                                         src={card.icon}
                                         alt={`${card.title} icon`}
@@ -97,13 +111,13 @@ const Navbar = () => {
                                 </div>
 
                                 {/* Tiêu đề */}
-                                <h3 className="text-2xl font-extrabold tracking-tight">{card.title}</h3>
+                                <h3 className="text-base sm:text-lg font-bold tracking-tight">{card.title}</h3>
 
                                 {/* Mô tả */}
-                                <p className="text-base mt-2 leading-relaxed">{card.description}</p>
+                                <p className="text-xs sm:text-sm mt-1 leading-snug line-clamp-2">{card.description}</p>
 
                                 {/* Nút đọc thêm */}
-                                <span className="mt-4 font-semibold text-white hover:underline inline-flex items-center gap-1 text-base">
+                                <span className="mt-2 font-semibold text-white hover:underline inline-flex items-center gap-1 text-sm">
                                     {card.readMore} <span>›</span>
                                 </span>
                             </div>
@@ -111,6 +125,7 @@ const Navbar = () => {
                     ))}
                 </div>
             </div>
+
         </div>
     );
 };
