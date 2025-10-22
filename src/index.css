@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* === Swiper navigation buttons === */
+.swiper-button-prev,
+.swiper-button-next {
+    color: white !important;
+    /* Màu trắng */
+    background: rgba(0, 0, 0, 0.3);
+    /* Nền mờ nhẹ cho dễ thấy */
+    border-radius: 9999px;
+    /* Bo tròn */
+    width: 36px;
+    /* Kích thước nút */
+    height: 36px;
+    transition: 0.3s;
+}
+
+/* Thu nhỏ mũi tên bên trong */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 14px !important;
+    /* ↓ Giảm kích thước mũi tên */
+    font-weight: bold;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    background: rgba(255, 255, 255, 0.5);
+    color: black;
+}
+
+/* === Swiper pagination dots === */
+.swiper-pagination-bullet {
+    background: white !important;
+    opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+    background: white !important;
+    opacity: 1;
+}
