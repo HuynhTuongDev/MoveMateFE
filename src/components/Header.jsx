@@ -5,37 +5,37 @@ const menuItems = [
     {
         label: "Giao Hàng",
         links: [
-            { label: "Cá Nhân", href: "https://www.lalamove.com/vi-vn/personal" },
-            { label: "Doanh Nghiệp", href: "https://www.lalamove.com/vi-vn/business" },
+            { label: "Cá Nhân", href: "#" },
+            { label: "Doanh Nghiệp", href: "#" },
         ],
     },
     {
         label: "Di Chuyển",
         links: [
-            { label: "Đặt xe di chuyển", href: "https://www.lalamove.com/vi-vn/personal" },
+            { label: "Đặt xe di chuyển", href: "#" },
         ],
     },
     {
         label: "Tài Xế",
         links: [
-            { label: "Trở thành đối tác", href: "https://www.lalamove.com/vi-vn/driver" },
-            { label: "Quản lý đội xe", href: "https://www.lalamove.com/vi-vn/fleet-management" },
+            { label: "Trở thành đối tác", href: "#" },
+            { label: "Quản lý đội xe", href: "#" },
         ],
     },
     {
         label: "Ưu Đãi",
         links: [
-            { label: "Lalamove Rewards", href: "https://www.lalamove.com/vi-vn/lalamove-rewards" },
+            { label: "Lalamove Rewards", href: "#" },
         ],
     },
     {
         label: "Về Lalamove",
         links: [
-            { label: "Giới thiệu", href: "https://www.lalamove.com/vi-vn/about-lalamove" },
-            { label: "Delivery care", href: "https://www.lalamove.com/careers" },
-            { label: "Blog", href: "https://www.lalamove.com/vi-vn/contact" },
-            { label: "Cơ hội nghề nghiệp", href: "https://www.lalamove.com/vi-vn/about-lalamove" },
-            { label: "Liên hệ hỗ trợ", href: "https://www.lalamove.com/vi-vn/about-lalamove" },
+            { label: "Giới thiệu", href: "#" },
+            { label: "Delivery care", href: "#" },
+            { label: "Blog", href: "#" },
+            { label: "Cơ hội nghề nghiệp", href: "#" },
+            { label: "Liên hệ hỗ trợ", href: "#" },
         ],
     },
 ];
@@ -51,8 +51,8 @@ const Header = () => {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    const baseText = isAtTop ? "text-white" : "text-gray-800";
-    const hoverText = "hover:text-orange-500";
+    const baseText = isAtTop ? "text-gray-50" : "text-gray-800";
+    const hoverText = "hover:text-orange-500 hover:underline hover:decoration-2 hover:decoration-orange-500 hover:underline-offset-4";
 
     const toggleDropdown = (index) => {
         setOpenIndex(openIndex === index ? null : index);
@@ -67,11 +67,11 @@ const Header = () => {
         >
             <div className="w-[90%] flex justify-between items-center mx-auto py-2">
                 {/* Logo */}
-                <a href="/" className="flex items-center z-50">
+                <a href="/" className="flex items-center z-50 ml-20">
                     <img
                         src="https://www.lalamove.com/hubfs/Lalamove%20Website%202020/logo.svg"
                         alt="Lalamove Logo"
-                        className="h-10"
+                        className="h-15"
                     />
                 </a>
 
@@ -155,7 +155,7 @@ const Header = () => {
                                             <li key={i}>
                                                 <a
                                                     href={link.href}
-                                                    className="block py-1 no-underline text-black hover:text-[#F37021]"
+                                                    className="block py-1 no-underline text-neutral-950 hover:text-orange-500"
                                                 >
                                                     {link.label}
                                                 </a>
@@ -167,7 +167,6 @@ const Header = () => {
                         ))}
                     </nav>
 
-                    {/* Footer nhỏ */}
                     <div className="mt-10 w-full text-[18px] text-gray-600 space-y-4">
                         <div className="flex items-center justify-between text-lg">
                             <span>🇻🇳 Việt Nam - Tiếng Việt</span>
@@ -187,20 +186,13 @@ const Header = () => {
 
                 {/* Menu desktop */}
                 <div className="hidden lg:flex items-center gap-6">
-                    <ul className={`flex items-center gap-6 font-medium ${baseText}`}>
+                    <ul className={`flex flex-col lg:flex-row items-center font-medium list-none space-x-0 lg:space-x-2 mt-3 ${baseText}`}>
                         {menuItems.map((item, idx) => (
                             <li key={idx} className="relative group">
-                                <button
-                                    className={`flex items-center gap-1 bg-transparent font-semibold border-none focus:outline-none transition-all duration-300 ${baseText} ${hoverText}`}
-                                >
+                                <button className={`flex items-center gap-1 bg-transparent font-semibold border-none focus:outline-none transition-all duration-300 ${baseText} ${hoverText}`}>
                                     {item.label}
                                     {item.links && item.links.length > 0 && (
-                                        <svg
-                                            className="w-4 h-4"
-                                            fill="none"
-                                            stroke="currentColor"
-                                            viewBox="0 0 24 24"
-                                        >
+                                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path d="M19 9l-7 7-7-7" />
                                         </svg>
                                     )}
@@ -211,7 +203,7 @@ const Header = () => {
                                             <li key={i}>
                                                 <a
                                                     href={link.href}
-                                                    className="block px-4 py-3 hover:bg-gray-100 no-underline text-black text-sm whitespace-nowrap"
+                                                    className="block px-3 py-3 hover:bg-gray-100 no-underline text-neutral-950 hover:text-orange-500 text-sm whitespace-nowrap"
                                                 >
                                                     {link.label}
                                                 </a>
@@ -223,30 +215,33 @@ const Header = () => {
                         ))}
                     </ul>
 
-                    <a
-                        href="#"
-                        className={`flex items-center gap-2 font-semibold no-underline transition-all duration-300 ${isAtTop ? "text-white" : "text-gray-800"
-                            } hover:text-orange-600`}
-                    >
-                        <Globe size={18} />
-                        Việt Nam - Tiếng Việt
-                    </a>
+                    <div className="flex flex-col lg:flex-row items-start lg:items-center gap-4 mt-4 lg:mt-0 lg:ml-6 lg:px-0 pb-3 lg:pb-0 mb-2.5">
+                        <a
+                            href="#"
+                            className={`flex items-center gap-2 font-semibold no-underline transition-all duration-300 ${isAtTop ? "text-white" : "text-gray-800"
+                                } hover:text-orange-600`}
+                        >
+                            <Globe size={18} />
+                            Việt Nam - Tiếng Việt
+                        </a>
 
-                    <a
-                        href="https://lalamove.onelink.me/2vQB/of9j9igz"
-                        className={`flex items-center gap-2 font-semibold no-underline transition-all duration-300 ${isAtTop ? "text-white" : "text-gray-800"
-                            } hover:text-orange-600`}
-                    >
-                        <User size={18} />
-                        Đăng nhập
-                    </a>
+                        <a
+                            href="#"
+                            className={`flex items-center gap-2 font-semibold no-underline transition-all duration-300 ${isAtTop ? "text-white" : "text-gray-800"
+                                } hover:text-orange-600`}
+                        >
+                            <User size={18} />
+                            Đăng nhập
+                        </a>
 
-                    <a
-                        href="https://www.lalamove.com/vi-vn/driver"
-                        className="px-3 py-2 rounded-md transition-colors font-medium no-underline bg-orange-600 hover:bg-gray-800 text-white"
-                    >
-                        Đăng ký
-                    </a>
+                        <a
+                            href="#"
+                            className="px-3 py-2 rounded-md transition-colors font-medium no-underline bg-orange-600 hover:bg-gray-800 text-white"
+                        >
+                            Đăng ký
+                        </a>
+                    </div>
+
                 </div>
             </div>
         </nav>
