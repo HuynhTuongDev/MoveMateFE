@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import VehicleList from "./VehicleList";
+import logo from "../../../public/lg.png"
 const slides = [
     {
         id: 1,
@@ -97,9 +98,9 @@ const BottomBanner = () => {
                     {/* Nút tải app */}
                     <div className="flex flex-wrap gap-4 items-center">
                         <img
-                            src="https://www.lalamove.com/hubfs/User_app_Generic_2024Oct-1.png"
+                            src={logo}
                             alt="Lalamove App Icon"
-                            className="h-12"
+                            className="h-24"
                         />
                         <a
                             href="https://lalamove.onelink.me/MgeC?af_dp=lalamove%3A%2F%2Fopen"

@@ -3,18 +3,6 @@ import VehicleItem from "./VehicleItem";
 
 const vehicleData = [
     {
-        img: "https://www.lalamove.com/hubfs/Bike_.png",
-        title: "Xe máy",
-        detailImg: "https://www.lalamove.com/hubfs/Honda_Wave_RIGHT%20(1).png",
-        details: [
-            { head: "Cước phí:", data: "Vui lòng xem giá chi tiết tại ứng dụng hoặc web app" },
-            { head: "Tải trọng tối đa:", data: "30 kg" },
-            { head: "Kích cỡ hàng hóa tối đa:", data: "40cm x 40cm x 40cm" },
-            { head: "Phù hợp cho:", data: "Giao hàng hóa nhỏ như tài liệu, thực phẩm, mỹ phẩm, quần áo hoặc phụ kiện." },
-            { head: "Lưu ý:", data: "Phí dịch vụ được dựa trên nhiều yếu tố như tình hình giao thông, kích thước hàng hóa, khả năng nhận đơn của đối tác tài xế, phí cầu đường, các phụ phí,... Vì vậy tổng giá dịch vụ có thể thay đổi. Giá hiển thị tại thời điểm đặt đơn có thể không giữ nguyên nếu có thay đổi về chi tiết đơn hàng." },
-        ],
-    },
-    {
         img: "https://www.lalamove.com/hubfs/Pick-up%20Truck_.png",
         title: "Xe bán tải",
         detailImg: "https://www.lalamove.com/hubfs/Toyota_Hilux_(Mk8)_DoubleCab_Revo_2700000.png",
