@@ -1,4 +1,5 @@
 import React from "react";
+import background from "../../public/bg.jpg"
 const Navbar = () => {
     const cards = [
         {
@@ -31,7 +32,7 @@ const Navbar = () => {
             <div
                 className="top-banner-img"
                 style={{
-                    backgroundImage: `linear-gradient(to right, rgba(0, 0, 0, 0.8) 20%, rgba(0,0,0,0) 60%), url("https://www.lalamove.com/hubfs/Lalamove%20Website%202020/Vietnam_Site/Homepage/VN_image_home_mainBanner.jpg")`,
+                    backgroundImage: `linear-gradient(to right, rgba(0, 0, 0, 0.8) 20%, rgba(0,0,0,0) 60%), url(${background})`,
                     height: '700px',
                     width: 'auto',
                     backgroundSize: '130% 110%',

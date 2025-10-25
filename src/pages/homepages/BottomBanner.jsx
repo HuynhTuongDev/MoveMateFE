@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import VehicleList from "./VehicleList";
+import logo from "../../../public/lg.png"
 const slides = [
     {
         id: 1,
@@ -76,6 +78,55 @@ const BottomBanner = () => {
                     </div>
                 </div >
             </section >
+            <VehicleList />
+            <div
+                className="relative w-full bg-cover bg-center min-h-[400px] flex items-center justify-start mt-40"
+                style={{
+                    backgroundImage:
+                        "url('https://www.lalamove.com/hubfs/Footer%20Lalamove.jpg')",
+                }}
+            >
+                {/* Ô cam nằm đè lên ảnh và nhô lên phía trên */}
+                <div className="absolute left-10 -top-1/4 bg-[#f36f21] text-white px-10 py-14 md:px-14 md:py-12 max-w-sm shadow-2xl rounded-sm ml-40">
+                    <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-snug">
+                        Bạn đã sẵn sàng đặt xe?
+                    </h2>
+                    <p className="text-base md:text-lg mb-8">
+                        Tải app ngay để đơn hàng của bạn được giao đến tận nơi.
+                    </p>
+
+                    {/* Nút tải app */}
+                    <div className="flex flex-wrap gap-4 items-center">
+                        <img
+                            src={logo}
+                            alt="Lalamove App Icon"
+                            className="h-24"
+                        />
+                        <a
+                            href="https://lalamove.onelink.me/MgeC?af_dp=lalamove%3A%2F%2Fopen"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <img
+                                src="https://www.lalamove.com/hubfs/icon-apple-app-store-3.png"
+                                alt="App Store"
+                                className="h-12 hover:scale-105 transition-transform"
+                            />
+                        </a>
+                        <a
+                            href="https://lalamove.onelink.me/MgeC?af_dp=lalamove%3A%2F%2Fopen"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <img
+                                src="https://www.lalamove.com/hubfs/Lalamove%20Website%202020/App_icon/icon-google-play.png"
+                                alt="Google Play"
+                                className="h-12 hover:scale-105 transition-transform"
+                            />
+                        </a>
+                    </div>
+                </div>
+            </div>
         </>
 
     );
