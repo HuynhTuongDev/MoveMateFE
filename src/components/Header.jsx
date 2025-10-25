@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Globe, User } from "lucide-react";
-
+import logo from "../../public/lg.png"
 const menuItems = [
     {
         label: "Giao Hàng",
@@ -69,9 +69,9 @@ const Header = () => {
                 {/* Logo */}
                 <a href="/" className="flex items-center z-50 ml-20">
                     <img
-                        src="https://www.lalamove.com/hubfs/Lalamove%20Website%202020/logo.svg"
+                        src={logo}
                         alt="Lalamove Logo"
-                        className="h-15"
+                        className="h-28"
                     />
                 </a>
 

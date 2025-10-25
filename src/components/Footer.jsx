@@ -1,6 +1,6 @@
 import React from "react";
 import { FaFacebookF, FaInstagram, FaYoutube, FaGlobe } from "react-icons/fa";
-
+import logo from "../../public/lg.png"
 const Footer = () => {
     const sections = [
         {
@@ -59,9 +59,9 @@ const Footer = () => {
                     <div>
                         <a href="https://www.lalamove.com/vi-vn">
                             <img
-                                src="https://www.lalamove.com/hubfs/Lalamove%20Website%202020/logo.svg"
+                                src={logo}
                                 alt="Lalamove Logo"
-                                className="h-12 mt-1"
+                                className="h-28 mt-1"
                             />
                         </a>
                     </div>

@@ -4,7 +4,7 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-
+import logo from "../../../public/lg.png"
 const slides = [
     {
         link: "#",
@@ -56,7 +56,7 @@ const features = [
 const apps = [
     {
         title: "Dành cho Khách hàng",
-        logo: "https://www.lalamove.com/hubfs/User_app_Generic_2024Oct-1.png",
+        logo: logo,
         links: [
             {
                 href: "#",
@@ -167,7 +167,7 @@ const TopBanner = () => {
                         >
                             {/* Logo */}
                             <div className="mb-8">
-                                <img src={app.logo} alt={app.title} className="w-40 h-40 object-contain" /> {/* logo to hơn */}
+                                <img src={app.logo} alt={app.title} className="w-44 h-40 object-contain" /> {/* logo to hơn */}
                             </div>
 
                             {/* Title */}
