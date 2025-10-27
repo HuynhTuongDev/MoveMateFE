@@ -25,13 +25,13 @@ const menuItems = [
     {
         label: "Ưu Đãi",
         links: [
-            { label: "Lalamove Rewards", href: "#" },
+            { label: "MoveMate Rewards", href: "#" },
         ],
     },
     {
-        label: "Về Lalamove",
+        label: "Về MoveMate",
         links: [
-            { label: "Giới thiệu", href: "#" },
+            { label: "Giới thiệu", href: "/about" },
             { label: "Delivery care", href: "#" },
             { label: "Blog", href: "#" },
             { label: "Cơ hội nghề nghiệp", href: "#" },
@@ -60,7 +60,7 @@ const Header = () => {
 
     return (
         <nav
-            className={`transition-all duration-300 ${isAtTop
+            className={`transition-all duration-300 z-50 ${isAtTop
                 ? "absolute top-0 left-0 w-full bg-transparent"
                 : "fixed top-0 left-0 w-full bg-white shadow-md z-50"
                 }`}
@@ -79,8 +79,8 @@ const Header = () => {
                 <button
                     onClick={() => setMenuOpen(true)}
                     className={`lg:hidden z-[10000] p-2 rounded-full transition-all duration-300 border-none font-bold
-                                ${isAtTop ? "text-white bg-transparent" : "text-orange-600 bg-transparent"} 
-                                hover:text-[#F37021] focus:outline-none`}
+                                ${isAtTop ? "text-gray-50 bg-transparent" : "text-orange-600 bg-transparent"} 
+                                hover:text-orange-600 focus:outline-none`}
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -198,7 +198,7 @@ const Header = () => {
                                     )}
                                 </button>
                                 {item.links && item.links.length > 0 && (
-                                    <ul className="absolute hidden group-hover:block bg-white shadow-md rounded-md list-none m-0 p-0 min-w-[180px]">
+                                    <ul className="absolute hidden group-hover:block bg-gray-50 shadow-md rounded-md list-none m-0 p-0 min-w-[180px]">
                                         {item.links.map((link, i) => (
                                             <li key={i}>
                                                 <a
